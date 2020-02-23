@@ -1,20 +1,24 @@
-from PIL import Image
+
 import glob, os
-import subprocess
+import random
 
+@app.route('/route_name')
+def script_output():
+    output = random_pic()
+    return render_template('template_name.html',output=output)
 
-def main():
-	
+def random_pic():
 	photos = []
 	print(glob.glob("characters/*.png"))
 	for pic in glob.glob("characters/*.png"):
 		photos.append(pic)
-	print(photos)
-	result = subprocess.run(['exiftool', '-h', '/characters/{}'.format(photos[0])], stdout=subprocess.PIPE)
-	print (type(result))
-	print ("\n\n",result.stdout)
-	normal_string = result.stdout.decode("utf-8")
-	print("\n\n", normal_string)
+	file = random.choice(photos)
+
+	return file
+
+def main():
+
+	script_output()
 
 
 if __name__ == "__main__":
