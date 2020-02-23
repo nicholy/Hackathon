@@ -1,5 +1,7 @@
 import tkinter as tk
 import province
+import os
+import parser
 
 root= tk.Tk()
 
@@ -42,25 +44,26 @@ def list_city():
 	w.pack()
 
 def callback(selection):
-	# info_msg1 = tk.Label(root, text=selection,font=('helvetica', 10))
-	# canvas1.create_window(200, 200, window=info_msg1)
-
 	getinfo(selection)
 
 
-
-
 def getinfo(city):
-    
-    label4 = tk.Label(root, text= 'Sports Teams Near ' + city + ' is:',font=('helvetica', 10))
-    canvas1.create_window(200, 200, window=label4)
-    
+
+	list_of_cities = parser.returnteams(city)
+	string = ""
+	for index in range(len(list_of_cities)):
+		string = string + list_of_cities[index] + ", "
+
+	label4 = tk.Label(root, text= 'Sports Teams Near ' + city + ' is:',font=('helvetica', 10))
+	canvas1.create_window(200, 200, window=label4)
+
+	label5 = tk.Label(root, text= string,font=('helvetica', 10))
+	canvas1.create_window(200, 250, window=label5)
 
 # Main method
 def main():
 	button1 = tk.Button(text='Get Info', command=list_city, bg='brown', fg='black', font=('helvetica', 9, 'bold'))
 	canvas1.create_window(200, 180, window=button1)
-	count += 1
 	root.mainloop()
 
 # Main program       
