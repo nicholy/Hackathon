@@ -1,4 +1,5 @@
 import tkinter as tk
+import province
 
 root= tk.Tk()
 
@@ -26,7 +27,14 @@ canvas1.create_window(200, 150, window=entry2)
 
 def list_city():
 
-	city_list = ["  ", "Vancouver", "Tornto"]
+	x1 = entry1.get()
+	x2 = entry2.get()
+
+	my_bot = province.MapBot(x1,x2)
+	prov = my_bot.Find_Prov()
+
+	city_list = list(province.Find_City(prov))
+	print(city_list)
 	variable = tk.StringVar(root)
 	variable.set(city_list[0]) # default value
 
@@ -34,30 +42,25 @@ def list_city():
 	w.pack()
 
 def callback(selection):
-	info_msg1 = tk.Label(root, text=selection,font=('helvetica', 10))
-	canvas1.create_window(200, 200, window=info_msg1)
+	# info_msg1 = tk.Label(root, text=selection,font=('helvetica', 10))
+	# canvas1.create_window(200, 200, window=info_msg1)
+
+	getinfo(selection)
 
 
-def getinfo():
+
+
+def getinfo(city):
     
-    x1 = entry1.get()
-    x2 = entry2.get()
-    
-    label4 = tk.Label(root, text= 'Sports Teams Near Location is:',font=('helvetica', 10))
+    label4 = tk.Label(root, text= 'Sports Teams Near ' + city + ' is:',font=('helvetica', 10))
     canvas1.create_window(200, 200, window=label4)
     
-    label5 = tk.Label(root, text= float(x1)**0.5,font=('helvetica', 10, 'bold'))
-    canvas1.create_window(200, 260, window=label5)
 
 # Main method
 def main():
-	count = 0
-	if count == 0:
-		button1 = tk.Button(text='Get Info', command=list_city, bg='brown', fg='black', font=('helvetica', 9, 'bold'))
-		canvas1.create_window(200, 180, window=button1)
-		count += 1
-	else:
-		button1.config(state="disabled")
+	button1 = tk.Button(text='Get Info', command=list_city, bg='brown', fg='black', font=('helvetica', 9, 'bold'))
+	canvas1.create_window(200, 180, window=button1)
+	count += 1
 	root.mainloop()
 
 # Main program       
