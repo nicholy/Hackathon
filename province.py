@@ -66,11 +66,12 @@ def Find_City(area):
 
   
 
-my_bot = MapBot('50.252282', '-82.880188')
-prov = my_bot.Find_Prov()
-# print (prov)
+# my_bot = MapBot('50.252282', '-82.880188')
+# prov = my_bot.Find_Prov()
+# # print (prov)
 
-city = Find_City(prov)
-print (city)
+# city = Find_City(prov)
+
+# print (list(city))
 
 
