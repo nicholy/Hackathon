@@ -3,7 +3,7 @@ import os
 
 # for the input of the province
 # city = 'Vancouver'
-#
+#  [Vancouver, [Canucks,Lions]]
 
 with open(r"\Users\wrlee\mountainmadness\Canadateam2020.csv") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
