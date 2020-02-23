@@ -1,0 +1,87 @@
+calgary:
+  soccer:
+  football:
+    - stampede
+  hockey:
+    - Flames
+  basketball:
+  baseballl:
+Edmonton:
+  soccer:
+  football:
+    - Eskimos
+  hockey:
+    - Oilers
+  basketball:
+  baseball:
+Hamilton:
+  soccer:
+  football:
+    - Tiger-cats
+  hockey:
+  basketball:
+  baseball:
+Montreal:
+  soccer:
+    - Imapct
+  football:
+    - Alouttes
+  hockey:
+    - Canadiens
+  basketball:
+  baseball:
+Ottawa:
+  soccer:
+  football:
+    - Redblacks
+  hockey:
+    - Senators
+  basketball:
+  baseball:
+Saskatchewan:
+  soccer:
+  football:
+    - RoughRiders
+  hockey:
+  basketball:
+  baseball:
+  Ottawa:
+  soccer:
+  football:
+    - Redblacks
+  hockey:
+    - Senators
+  basketball:
+  baseball:
+Tornto:
+  soccer:
+    - Toronto FC
+  football:
+    - Argonauts
+  hockey:
+    - Maple Leafs
+  basketball:
+    - Raptors
+  baseball:
+    - Blue Jays
+Vancouver:
+  soccer:
+    - White Caps
+  football:
+    - Lions
+  hockey:
+    - Canucks
+  basketball:
+  baseball:
+Winnepeg:
+  soccer:
+  football:
+    - Blue Bombers
+  hockey:
+    - Jets
+  basketball:
+  baseball:
+
+
+
+    
