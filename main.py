@@ -30,18 +30,17 @@ def list_city():
 	variable.set(city_list[0]) # default value
 
 	w = tk.OptionMenu(root, variable, *city_list, command=callback)
-	w.place(x = 200, y =250)
 	w.pack()
 
 def callback(selection):
 	print(selection)
 
-def getSquareRoot ():
+def getinfo():
     
     x1 = entry1.get()
     x2 = entry2.get()
     
-    label4 = tk.Label(root, text= 'Sports Teams Within Radius of' + x1 + ' is:',font=('helvetica', 10))
+    label4 = tk.Label(root, text= 'Sports Teams Near Location is:',font=('helvetica', 10))
     canvas1.create_window(200, 200, window=label4)
     
     label5 = tk.Label(root, text= float(x1)**0.5,font=('helvetica', 10, 'bold'))
