@@ -41,28 +41,44 @@ class MapBot:
 
 def Find_City(area):
         provs1 = ["BC","AB","SK","MB","ON","QC","NB","PE","NS","NL","YT","NT","NU"]
+        cities = []
         
         for i in range (len(provs1)):
             if area == provs1[i]:
                 count = i
 
         if count == 0 or count == 10:
-            return "Vancouver"
+            cities.append("Vancouver")
+            print(cities)
+            return cities
 
         elif count == count == 2:
-            return "Regina"
+            cities.append("Regina")
+            print(cities)
+            return cities
 
         elif count == 3 or count == 12:
-            return "Winnipeg"
+            cities.append("Winnipeg")
+            print(cities)
+            return cities
 
         elif count == 5 or count == 6 or count == 7 or count == 8 or count == 9:
-            return "Montreal"
+            cities.append("Montreal")
+            print(cities)
+            return cities
         
         elif count == 1 or count == 11:
-            return "Calgary", "Edmonton"
+            cities.append("Calgary")
+            cities.append("Edmonton")
+            print(cities)
+            return cities
 
         elif count == 4:
-            return "Toronto", "Ottawa", "Hamilton"  
+            cities.append("Toronto")
+            cities.append("Ottawa")
+            cities.append("Hamilton")
+            print(cities)
+            return cities
 
   
 

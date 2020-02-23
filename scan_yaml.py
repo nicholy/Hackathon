@@ -13,6 +13,7 @@ sports = [
 
 def returnteams(city):
     teams = []
+    
     with open('Desktop/hackathon/teams.yaml', 'r') as file:
         doc = yaml.load(file)
     for index in range(len(sports)):

@@ -1,7 +1,7 @@
 import tkinter as tk
 import province
 import os
-import parser
+import scan_yaml
 
 root= tk.Tk()
 
@@ -35,7 +35,7 @@ def list_city():
 	my_bot = province.MapBot(x1,x2)
 	prov = my_bot.Find_Prov()
 
-	city_list = list(province.Find_City(prov))
+	city_list = province.Find_City(prov)
 	print(city_list)
 	variable = tk.StringVar(root)
 	variable.set(city_list[0]) # default value
@@ -49,7 +49,7 @@ def callback(selection):
 
 def getinfo(city):
 
-	list_of_cities = parser.returnteams(city)
+	list_of_cities = scan_yaml.returnteams(city)
 	string = ""
 	for index in range(len(list_of_cities)):
 		string = string + list_of_cities[index] + ", "
